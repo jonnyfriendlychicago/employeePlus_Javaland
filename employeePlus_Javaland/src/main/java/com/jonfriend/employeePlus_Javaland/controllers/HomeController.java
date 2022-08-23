@@ -48,8 +48,8 @@ public class HomeController {
 			return "index.jsp";
 		}//Store their ID from the DB in session,
 		session.setAttribute("userId", user.getId());
-//		return "redirect:/movies";
-		return "helloworld.jsp";
+		return "redirect:/workers";
+		
 	}
 	
     @PostMapping("/login")
@@ -67,6 +67,7 @@ public class HomeController {
         // TO-DO Later: Store their ID from the DB in session, 
         session.setAttribute("userId", user.getId());
         return "redirect:/movies";
+        ///////changeeeeeee
     }
 	
 // add a logout route

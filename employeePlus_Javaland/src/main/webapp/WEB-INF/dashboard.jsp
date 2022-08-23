@@ -12,41 +12,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-<title>Dashboard</title>
+<title>workers</title>
 </head>
 <body style="background-color:Maroon;">
 	
 	<div class="d-flex justify-content-end" >
       	<a href="/logout" class="btn btn-dark">logout</a>
-      	<a href="/movies/new" class="btn btn-dark">Add to my movie!</a>
+      	<a href="/workers/new" class="btn btn-dark">Add Emp!</a>
     </div>
     <nav class="navbar navbar-expand-sm bg-dark justify-content-center">
 		<h3 class="text-white">Welcome, <c:out value="${user.name }"></c:out>!</h3>
 	</nav>
 <div class="container">
-	<h3>Movies from everyone's shelves:</h3>
+	<h3>workers welcomed:</h3>
 	<table class="table table-dark table-striped">
 		<thead>
 			<tr>
 				<th>ID</th>
-				<th>Movie</th>
-				<th>Actors</th>
+				<th>worker</th>
+				<th>nothing</th>
 				<th>Date</th>
 				<th>Posted By</th>
 				<th>Actions</th>
 			</tr>
 		</thead>
 		<tbody>
-		<c:forEach items="${ allmovies }" var="mov">
+		<c:forEach items="${ allworkers }" var="mov">
 			<tr>
 				<td>${ mov.id }</td>
-				<td><a href="/movie/${ mov.id }">${ mov.name }</a></td>
-				<td>${ mov.actor }</td>
-				<td><fmt:formatDate value="${mov.dueDate}" pattern="MMMM dd"/> </td>
+				<td><a href="/worker/${ mov.id }">${ mov.firstName } { mov.lastName }</a></td>
+				<td>nothing</td>
+				<td><fmt:formatDate value="${mov.hireDate}" pattern="MMMM dd"/> </td>
 				<td>${ mov.user.name }</td>
 				<td>
 					<c:if test = "${mov.user.id==user.id}">
-		       			<a href="/movies/edit/${mov.id}" class="btn btn-dark">Edit</a>
+		       			<a href="/workers/edit/${mov.id}" class="btn btn-dark">Edit</a>
 		       			
 		    		</c:if>
 				

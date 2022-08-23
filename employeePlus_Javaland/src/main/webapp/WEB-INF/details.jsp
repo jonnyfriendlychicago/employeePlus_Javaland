@@ -15,27 +15,27 @@
 </head>
 <body>
 	<div class="d-flex justify-content-start">
- 		<div><a href="/movies" class="btn btn-success">Back to Home</a></div>
+ 		<div><a href="/workers" class="btn btn-success">Back to Home</a></div>
 	</div>
 	<div class="d-flex justify-content-end" >
       	<a href="/logout" class="btn btn-dark">logout</a>
-      	<a href="/movies/new" class="btn btn-dark">Add to my movies!</a>
+      	<a href="/workers/new" class="btn btn-dark">Add Employee!</a>
     </div>
     <nav class="navbar navbar-expand-sm bg-dark justify-content-center">
-		<h3 class="text-white"><c:out value="${mov.user.name }"></c:out> you watched ${mov.name}</h3>
+		<h3 class="text-white"><c:out value="${emp.user.name }"></c:out> added by ${emp.name}</h3>
 	</nav>
 		<div id="page_header__message">
 				<c:out value="${message}"/>
 		</div>
 	<div class="container">
-		<h2>Comments:</h2>
+		<h2>description:</h2>
 			<hr class="my-4">
-		<p class="lead"><em>${ mov.comment }</em></p>
-		<hr class="my-4">
+			<p class="lead"><em>${ emp.workerDescription }</em></p>
+			<hr class="my-4">
 		<c:choose>
-			<c:when test="${ userId == mov.user.id }">
-			<a href="/movies/edit/${mov.id}" class="btn btn-primary btn-md">Edit</a>
-			<a href="/delete/<c:out value="${mov.id}"/>"class="btn btn-dark">delete</a>
+			<c:when test="${ userId == emp.user.id }">
+			<a href="/workers/edit/${emp.id}" class="btn btn-primary btn-md">Edit</a>
+			<a href="/delete/<c:out value="${emp.id}"/>"class="btn btn-dark">delete</a>
 			</c:when>
 		</c:choose>
 	</div>
