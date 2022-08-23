@@ -16,39 +16,49 @@
 </head>
 <body>
 <div class="d-flex justify-content-start">
- 	<div><a href="/movies" class="btn btn-success">Back to movies</a></div>
+ 	<div><a href="/workers" class="btn btn-success">Back to workers</a></div>
 </div>
     <div class="d-flex justify-content-end" >
         <a href="/logout"  class="btn btn-dark">logout</a>
     </div>
     <nav class="navbar navbar-expand-sm bg-light justify-content-center">
-	<h3 class="text-primary">Add to Your Movies</h3>
+	<h3 class="text-primary">add employees</h3>
 	</nav>
 <div class="container">
-	<form:form action="/movies/add" method="post" modelAttribute="newMM" class="form">
+	<form:form action="/workers/add" method="post" modelAttribute="newWW" class="form">
 			<div class="form-row">
 			 	
-				<form:label for="name" path="name">Title:</form:label>
-				<form:errors path="name" class="error"/>
-				<form:input type="name" path="name" class="form-control"/>
+				<form:label for="firstName" path="firstName">First Name</form:label>
+				<form:errors path="firstName" class="error"/>
+				<form:input type="firstName" path="firstName" class="form-control"/>
 				
 			</div>
 			
 			<div class="form-row">
-				<form:errors path="actor" class="error"/><br>
-				<form:label for="actor" path="actor">Actor:</form:label>
-				<form:input type="actor" path="actor" class="form-control"/>
+				<form:errors path="lastName" class="error"/><br>
+				<form:label for="lastName" path="lastName">Last Name</form:label>
+				<form:input type="lastName" path="lastName" class="form-control"/>
 			</div>
 			
 			<div class="form-row">
-				<form:errors path="comment" class="error"/><br>
-				<form:label for="comment" path="comment">My Thoughts:</form:label>
-				<form:textarea path="comment" class="form-control"/>
+				<form:errors path="jobTitle" class="error"/><br>
+				<form:label for="jobTitle" path="jobTitle">Job Title</form:label>
+				<form:textarea path="jobTitle" class="form-control"/>
+			</div>
+			<div class="form-row">
+				<form:errors path="workerDescription" class="error"/><br>
+				<form:label for="workerDescription" path="workerDescription">Worker Description:</form:label>
+				<form:textarea path="workerDescription" class="form-control"/>
+			</div>
+			<div class="form-row">
+				<form:errors path="employmentType" class="error"/><br>
+				<form:label for="employmentType" path="employmentType">Type:Full Time,Part-Time, Contract</form:label>
+				<form:textarea path="employmentType" class="form-control"/>
 			</div>
 			<div>
-				<form:errors path="dueDate" class="text-danger"/>
-				<form:label for="dueDate" path="comment">date to watch</form:label>
-				<form:input path="dueDate" type="date"/>
+				<form:errors path="hireDate" class="text-danger"/>
+				<form:label for="hireDate" path="hireDate">Hire Date</form:label>
+				<form:input path="hireDate" type="date"/>
 			</div>
 			<div class="form-row">
 				<form:errors path="user" class="error"/>
