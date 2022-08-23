@@ -22,7 +22,7 @@
       	<a href="/workers/new" class="btn btn-dark">Add Employee!</a>
     </div>
     <nav class="navbar navbar-expand-sm bg-dark justify-content-center">
-		<h3 class="text-white"><c:out value="${emp.user.name }"></c:out> added by ${emp.name}</h3>
+		<h3 class="text-white"><c:out value="${emp.user.name }"></c:out> added by ${emp.firstName}</h3>
 	</nav>
 		<div id="page_header__message">
 				<c:out value="${message}"/>
@@ -35,7 +35,7 @@
 		<c:choose>
 			<c:when test="${ userId == emp.user.id }">
 			<a href="/workers/edit/${emp.id}" class="btn btn-primary btn-md">Edit</a>
-			<a href="/delete/<c:out value="${emp.id}"/>"class="btn btn-dark">delete</a>
+			<a href="/delete/<c:out value="${emp.id}"/>"class="">delete</a>
 			</c:when>
 		</c:choose>
 	</div>
