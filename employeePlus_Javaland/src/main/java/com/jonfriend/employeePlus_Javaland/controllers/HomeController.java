@@ -48,7 +48,7 @@ public class HomeController {
 			return "index.jsp";
 		}//Store their ID from the DB in session,
 		session.setAttribute("userId", user.getId());
-		return "redirect:/workers";
+		return "redirect:/home";
 		
 	}
 	
@@ -66,8 +66,8 @@ public class HomeController {
         // No errors! 
         // TO-DO Later: Store their ID from the DB in session, 
         session.setAttribute("userId", user.getId());
-        return "redirect:/movies";
-        ///////changeeeeeee
+        return "redirect:/home";
+        
     }
 	
 // add a logout route

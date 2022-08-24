@@ -57,7 +57,7 @@
 			</div>
 			    
 			<div class="menu-button" title="employee list">
-				<a href="/dashboard">
+				<a href="/workers">
 				<img src="https://img.icons8.com/glyph-neue/40/000000/list--v1.png"/></a>
 			</div>
 				
@@ -130,6 +130,6 @@
     </div>
 	</form:form>
 	</div>
-</div>
+
 </body>
 </html>
