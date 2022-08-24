@@ -31,3 +31,6 @@ replay_pid*
 .metadata
 
 # End of https://www.toptal.com/developers/gitignore/api/java
+
+# JRF addition to ignore mac-side files
+.DS_Store
