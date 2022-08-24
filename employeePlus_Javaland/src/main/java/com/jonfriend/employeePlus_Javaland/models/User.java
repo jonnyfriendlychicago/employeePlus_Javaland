@@ -27,14 +27,14 @@ public class User {
 	private String email;
 	
 	@NotEmpty(message="Password is required!")
-	@Size(min=3, max=128, message="Password must be between 8 and 128 characters")
+	@Size(min=3, max=128, message="Password must be between 3 and 10 characters")
 	private String password;
 	
 	
 	// Transient is not saved in database. Checks confirm password same as password
 	@Transient
 	@NotEmpty(message="Confirm Password is required!")
-	@Size(min=3, max=128, message="Password must be between 8 and 128 characters")
+	@Size(min=3, max=128, message="Password must be between 3 and 10 characters")
 	private String confirm;
 	
 	

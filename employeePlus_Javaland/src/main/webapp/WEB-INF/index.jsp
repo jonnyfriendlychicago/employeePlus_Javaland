@@ -45,30 +45,7 @@
 		    
 	<div class="buttons">
 	
-		<!--  <div>
-		<h3>Welcome, Sheila </h3>
-		</div>
-		
-			<div class="menu-button">
-				<a href="#" title="home">
-			  	<img src="https://img.icons8.com/android/45/000000/home.png"/></a>
-			</div>
-			    
-			<div class="menu-button">
-			    <a href="#" title="add a employee">
-				<img src="https://img.icons8.com/fluency-systems-filled/60/men-age-group-5.png"/></a>
-			</div>
-			    
-			<div class="menu-button" title="employee list">
-				<a href="#">
-				<img src="https://img.icons8.com/glyph-neue/40/000000/list--v1.png"/></a>
-			</div>
-				
-		    <div class="menu-button" title="logout">
-		     	<a href="#">
-		  		<img src="https://img.icons8.com/ios-filled/35/000000/logout-rounded.png"/></a>
-		    </div>-->
-		    	
+
 	 </div>
 </nav>
 
@@ -81,22 +58,22 @@
 		<h2 class="">Register</h2>
 		<div class="">
 			<form:label path="name" class="text-primary">User-Name:</form:label><br/>
-			<form:errors path="name" class="text-danger"/>
+			<form:errors path="name" class="error"/>
 			<form:input class="input" path="name"/>
 		</div>
 		<div class="">
 			<form:label path="email" class="text-primary">Email:</form:label><br/>
-			<form:errors path="email" class="text-danger"/>
+			<form:errors path="email" class="error"/>
 			<form:input class="input" path="email"/>
 		</div>	
 		<div class="">
 			<form:label path="password" class="text-primary">Password:</form:label><br/>
-			<form:errors path="password" class="text-danger"/>
+			<form:errors path="password" class="error"/>
 			<form:input type="password" path="password"/>
 		</div>	
 		<div class="">
 			<form:label path="confirm" class="text-primary">Confirm Password:</form:label><br/>
-			<form:errors path="confirm" class="text-danger"/>
+			<form:errors path="confirm" class="error"/>
 			<form:input type="password" path="confirm"/>
 		</div>	
 		
@@ -123,12 +100,12 @@
 	<h2 class="">Login</h2>
 		<div class="">
 			<form:label path="email" class="">Email:</form:label><br/>
-			<form:errors path="email" class=""/>
+			<form:errors path="email" class="error"/>
 			<form:input class="input" path="email"/>
 		</div>
 		<div class="">
 			<form:label path="password" class="text-success">Password:</form:label><br/>
-			<form:errors path="password" class="text-danger"/>
+			<form:errors path="password" class="error"/>
 			<form:input type="password" path="password"/>
 		</div>
 		

@@ -73,9 +73,9 @@
     	<div class="blade-left">
      	<div>
   	 	<h1>Welcome to Employee Plus</h1>
-  	 	<p>Welcome to your HR solution for tracking your employees!
-  	 	You can add a employees info to your employee list and edit and delete as needed,
-  	 	helping you keep track of who works where.
+  	 	<p>Welcome to your HR solution for tracking your employees.  
+  	 	You can add a employees to your employee list, then edit/delete 
+  	 	as needed, helping you keep track of who works where.
   	 	</p>
  
     </div>
@@ -86,9 +86,8 @@
     	<div class="blade-right">
       		<div>
       		<h1>Our Mission</h1>
-      		<p>We are a group of developers grinding away,
-      		 at adding some features to make your HR nightmares a HR dream 
-      		 stay tuned for added features! </p>
+      		<p>We are a group of developers grinding away to make your HR nightmares a
+      		 HR dream.  Stay tuned for added features! </p>
     </div>
     </div>
 
