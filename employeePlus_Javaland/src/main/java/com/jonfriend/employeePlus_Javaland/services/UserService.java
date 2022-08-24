@@ -62,7 +62,8 @@ public class UserService {
     	// Find user in the DB by email
         // Reject if NOT present
     	if(!logUser.isPresent()) {
-    		logResult.rejectValue("email", "Matches", "User not found!");
+    		logResult.rejectValue("email", "Matches", "");
+    		//user not found in ""
     		return null;
     	}
     	// User exists, retrieve user from DB

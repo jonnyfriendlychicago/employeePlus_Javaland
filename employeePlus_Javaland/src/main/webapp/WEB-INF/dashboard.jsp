@@ -74,7 +74,7 @@
 			
 				<th>Worker</th>
 				<th>Job Title</th>
-				<th>Date</th>
+				<th>Hire Date</th>
 				<th>Posted By</th>
 				<th>Actions</th>
 			</tr>
