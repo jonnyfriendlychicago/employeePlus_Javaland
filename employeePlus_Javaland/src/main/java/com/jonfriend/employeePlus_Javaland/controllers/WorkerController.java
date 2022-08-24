@@ -28,7 +28,17 @@ public class WorkerController {
 	private UserService userService;
 	
 	
-	//to enter in the dashboard
+	//to enter home
+	@GetMapping("/home")
+	public String homeH(Model dashH) {
+		if(session.getAttribute("userId") == null) {
+			return "redirect:/";
+		}//main page display workers and user name
+		Long userId = (Long) session.getAttribute("userId");//this shows who is online (welcome user)	
+		dashH.addAttribute("user", userService.findById(userId));//(welcome user)
+		return "helloworld.jsp";
+	}
+	
 	@GetMapping("/workers")
 	public String home(Model dashB) {
 		if(session.getAttribute("userId") == null) {
@@ -37,10 +47,9 @@ public class WorkerController {
 		Long userId = (Long) session.getAttribute("userId");//this shows who is online (welcome user)	
 		dashB.addAttribute("user", userService.findById(userId));//(welcome user)
 		dashB.addAttribute("allworkers", workerService.getAllWorkers());//getAll is in the service page
-	//REMEMBER TO IMPORT THE AUTOWIRED SERVICE 
 		return "dashboard.jsp";
+		
 	}
-	
 	
 //	Check if user is in session for all get routes
 	//Add new  Get and Post
@@ -49,6 +58,8 @@ public class WorkerController {
 		if(session.getAttribute("userId") == null) {
 			return "redirect:/";
 		}
+		Long userId = (Long) session.getAttribute("userId");//this shows who is online (welcome user)	
+		newW.addAttribute("user", userService.findById(userId));//(welcome user)
 		newW.addAttribute("newWW", new Worker());
 		newW.addAttribute("sessionId", session.getAttribute("userId"));
 		return "add.jsp";
@@ -70,6 +81,8 @@ public class WorkerController {
 		if(session.getAttribute("userId") == null) {
 			return "redirect:/";
 		}
+		Long userId = (Long) session.getAttribute("userId");//this shows who is online (welcome user)	
+		model.addAttribute("user", userService.findById(userId));//(welcome user)
 		model.addAttribute("emp", workerService.getById(id));
 		model.addAttribute("userId", session.getAttribute("userId"));
 		return "details.jsp";
@@ -83,6 +96,8 @@ public class WorkerController {
 			return "redirect:/";
 		}
 		Worker editWorker = workerService.getById(id);
+		Long userId = (Long) session.getAttribute("userId");//this shows who is online (welcome user)	
+		edit.addAttribute("user", userService.findById(userId));//(welcome user)
 		edit.addAttribute("emp", editWorker);
 		return "edit.jsp";
 	}

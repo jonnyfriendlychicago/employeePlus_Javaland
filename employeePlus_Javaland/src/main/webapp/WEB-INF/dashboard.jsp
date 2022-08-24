@@ -55,7 +55,7 @@
 			</div>
 			    
 			<div class="menu-button" title="employee list">
-				<a href="/dashboard">
+				<a href="/workers">
 				<img src="https://img.icons8.com/glyph-neue/40/000000/list--v1.png"/></a>
 			</div>
 				
@@ -80,20 +80,20 @@
 			</tr>
 		</thead>
 		<tbody>
-		<c:forEach items="${ allworkers }" var="mov">
+		<c:forEach items="${ allworkers }" var="emp">
 			<tr>
-			
-				<td><a href="/worker/${ mov.id }">${ mov.firstName } ${ mov.lastName }</a></td>
-				<td>${mov.jobTitle}</td>
-				<td><fmt:formatDate value="${mov.hireDate}" pattern="MMMM dd"/> </td>
-				<td>${ mov.user.name }</td>
+			<c:if test = "${emp.user.id==user.id}">
+				<td><a href="/worker/${ emp.id }">${ emp.firstName } ${ emp.lastName }</a></td>
+				<td>${emp.jobTitle}</td>
+				<td><fmt:formatDate value="${emp.hireDate}" pattern="MMMM dd"/> </td>
+				<td>${ emp.user.name }</td>
 				<td>
-					<c:if test = "${mov.user.id==user.id}">
-		       			<a href="/workers/edit/${mov.id}" title="edit employee" class=""><img src="https://img.icons8.com/ios-filled/25/000000/edit--v1.png"/></a>
-		       			<a href="/delete/<c:out value="${mov.id}"/>"title="delete"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/25/000000/external-delete-multimedia-kiranshastry-solid-kiranshastry.png"/></a>
-		    		</c:if>
+					
+		       			<a href="/workers/edit/${emp.id}" title="edit employee" class=""><img src="https://img.icons8.com/ios-filled/25/000000/edit--v1.png"/></a>
+		       			<a href="/delete/<c:out value="${emp.id}"/>"title="delete"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/25/000000/external-delete-multimedia-kiranshastry-solid-kiranshastry.png"/></a>
+		    		
 				
-				</td>
+				</td></c:if>
 			</tr>
 		</c:forEach>
 		</tbody>
